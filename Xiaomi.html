@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xiaomi</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #09161d;
+		}
+		.img{
+			pointer-events: none;
+		}
+		.card{
+			position: relative;
+			width: 320px;
+			height: 420px;
+			background: #285169;
+			border-radius: 20px;
+			overflow: hidden;
+			margin-left: 10px;
+		}
+		.card::before{
+			content: '';
+			position: absolute;
+			top: -50%;
+			width: 100%;
+			height: 100%;
+			background: #2196f3;
+			transform: skewY(345deg);
+			transition: 0.5s;
+		}
+		.card:hover::before{
+			top: -70%;
+			transform: skewY(390deg);
+		}
+		.card::after{
+			content: 'Xiaomi';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-weight: 600;
+			font-size: 5em;
+			color: rgba(0, 0, 0, 0.1);
+		}
+		.card .imgBx{
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 20px;
+			z-index: 1;
+		}
+		.card .imgBx img{
+			max-width: 100%;
+			transition: 0.5s;
+
+		}
+		.card:hover .imgBx img{
+			max-width: 75%;
+			margin-left: 25px;
+		}
+		.card .contentBx{
+			position: relative;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			z-index: 1;
+		}
+		.card .contentBx h3{
+			font-size: 18px;
+			color: #fff;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		.card .contentBx .price{
+			font-size: 24px;
+			color: #fff;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		.card .contentBx .buy{
+			position: relative;
+			top: 200;
+			opacity: 0;
+			padding: 10px 30px;
+			margin-top: 15px;
+			color: #fff;
+			text-decoration: none;
+			background: #2196f3;
+			border-radius: 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: 0.5s;
+		}
+		.card:hover .contentBx .buy{
+			top: 0;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<!--Xiaomi Redmi Note 8 Pro-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/jZJCHC7/Xiaomi-Redmi-Note8-Pro.png" alt="Xiaomi-Redmi-Note8-Pro" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3 >Xiaomi Redmi Note 8 Pro</h3>
+			<h2 class="price">$5,499.<small>00</small></h2>
+			<a href="XRN8P.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Xiaomi Redmi Note 9S-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/P1gQj0n/Xiaomi-Redmi-Note9-S.png" alt="Xiaomi-Redmi-Note9-S" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Xiaomi Redmi Note 9S</h3>
+			<h2 class="price">$4,799.<small>00</small></h2>
+			<a href="XRN9S.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Xiaomi Mi 10-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/qFJVVjC/Xiaomi-Mi10.png" alt="Xiaomi-Mi10" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Xiaomi Mi 10</h3>
+			<h2 class="price">$14,199.<small>00</small></h2>
+			<a href="XM10.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Xiaomi Pocophone X3 NFC-->
+
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/7GwwZYJ/Xiaomi-Pocophone-X3-NFC.png" alt="Xiaomi-Pocophone-X3-NFC" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Pocophone X3 NFC</h3>
+			<h2 class="price">$5,499.<small>00</small></h2>
+			<a href="XPX3NFC.html" class="buy">Comprar</a>
+		</div>
+	</div>
+</body>
+</html>

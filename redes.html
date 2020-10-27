@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redes Sociales</title>
+	<script src="https://kit.fontawesome.com/0b9434ab55.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #09161d;
+		}
+		ul{
+			position: relative;
+		}
+		ul li{
+			position: relative;
+			list-style: none;
+			margin: 0 20px;
+			margin-top: 25px;
+		}
+		ul li a{
+			text-decoration: none;
+		}
+		ul li a.fab{
+			font-size: 5em;
+			color: #222;
+			align-items: center;
+		}
+		ul li a.fas{
+			font-size: 5em;
+			color: #222;
+			align-items: center;
+		}
+		ul li::before{
+			font-family: fontAwesome;
+			position: absolute;
+			top: -4px;
+			left: 0;
+			font-size: 5em;
+			height: 0;
+			overflow: hidden;
+			transition: 0.5s ease-in-out;
+		}
+		
+		#f:hover{
+			color: #3b5998;
+			transition: 0.5s;
+			text-shadow: 02px 2px 20px #00bbff;
+		}
+		#w:hover{
+			color: #00e300;
+			transition: 0.5s;
+			text-shadow: 02px 2px 20px #30ff30;
+		}
+		#y:hover{
+			color: #ed0000;
+			transition: 0.5s;
+			text-shadow: 02px 2px 20px #ff3333;
+		}
+		/*
+		ul li:nth-child(1)::before{
+			content: '\f39e';
+			color: #3b5998;
+			border-bottom: 4px solid #3b5998;
+		}
+		ul li:nth-child(2)::before{
+			content: '\f232';
+			color: #25d366;
+			border-bottom: 4px solid #25d366;
+		}
+		ul li:nth-child(3)::before{
+			content: '\f16a';
+			color: #ff0000;
+			border-bottom: 4px solid #ff0000;
+			height:
+		}
+		ul li:hover::before{
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="https://www.facebook.com/CristianMtzC" class="fab fa-facebook-f" target="_blank" id="f"></a></li>
+		<li><a href="https://api.whatsapp.com/send?phone=525538674900" class="fab fa-whatsapp" target="_blank" id="w"></a></li>
+		<li><a href="https://www.youtube.com/channel/UC77gZHS0p2YJNrB7MK3bccA?view_as=subscriber" class="fab fa-youtube" target="_blank" id="y"></a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Registrate</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		:root{
+			--colorTextos: #49454567;
+		}
+		*, ::before, ::after{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background: #000046;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 600px;
+		}
+		h1{
+			text-align: center;
+			font-weight: 700;
+		}
+		form{
+			background: #fff;
+			padding: 40px 0;
+			box-shadow: 0 0 6px 0 rgba(255,255,255.0.8);
+			border-radius: 20px;
+		}
+		.form{
+			width: 100%;
+			margin: auto;
+		}
+		form .grupo{
+			position: relative;
+			margin: 45px;
+		}
+		input{
+			background: none;
+			color: #c6c6c6;
+			font-size: 18px;
+			padding: 10px 10px 10px 5px;
+			display: block;
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid var(--colorTextos);
+		}
+		input:focus{
+			outline: none;
+			color: #5e5d5d;
+		}
+		label{
+			color: var(--colorTextos);
+			font-size: 16px;
+			position: absolute;
+			left: 5px;
+			top: 10px;
+			transition: 0.3s ease all;
+			pointer-events: none;
+		}
+		input:focus~label, input:valid~label{
+			top: -13px;
+			font-size: 12px;
+			color: #2196f3;
+		}
+		.barra{
+			position: relative;
+			display: block;
+			width: 100%;
+		}
+		.barra::before{
+			content: '';
+			height: 2.5px;
+			width: 0;
+			bottom: 0;
+			position: absolute;
+			background: linear-gradient(to right, #00c3ff, #ffff1c);
+			transition: 0.3s ease width;
+			left: 0;
+		}
+		input:focus~.barra::before{
+			width: 100%;
+		}
+		button{
+			background: #000046;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #1CB5E0, #000046);
+			border: none;
+			display: block;
+			width: 80%;
+			margin: 10px auto;
+			color: #fff;
+			height: 40px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+		@media screen and (max-width: 500px){
+			form{
+				width: 80%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="POST" id="form">
+		<div class="form">
+			<h1>Registro</h1>
+			<div class="grupo">
+				<input type="text" id="name" name="" required><span class="barra"></span>
+				<label for="">Nombre</label>
+			</div>
+			<div class="grupo">
+				<input type="email" id="name" name="" required><span class="barra"></span>
+				<label for="">Email</label>
+			</div>
+			<div class="grupo">
+				<input type="password" id="name" name="" required><span class="barra"></span>
+				<label for="">Password</label>
+			</div>
+			<button type="submit">Registrarte</button>
+		</div>
+	</form>
+</body>
+</html>

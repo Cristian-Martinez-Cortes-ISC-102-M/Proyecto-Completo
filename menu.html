@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Candara Light';
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #09161d;
+		}
+		.neon{
+			position: initial;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			margin: 0;
+			margin-top: 25px;
+			margin-left: 295px; 
+			padding: 0 20px;
+			font-size: 2em;
+			color: #fff;
+			text-shadow: 0 0 20px #22e0ff;
+		}
+		.neon:after{
+			content: attr(data-text);
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0 20px;
+			z-index: -1;
+			color: #22e0ff;
+			filter: blur(15px);
+		}
+		.neon:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #22e0ff;
+			z-index: -2;
+			opacity: .5;
+			filter: blur(40px);
+		}
+		#clock h2{
+			display: block;
+			position: relative;
+			color: #fff;
+			text-align: center;
+			margin: 10px 0;
+			text-transform: uppercase;
+			letter-spacing: 0.4em;
+			font-size: 0.8em;
+		}
+		#clock #time{
+			display: flex;
+		}
+		#clock #time div{
+			margin: 0 5px;
+		}
+		#clock #time div span{
+			position: relative;
+			display: block;
+			width: 60px;
+			height: 30px;
+			background: #2196f3;
+			color: #fff;
+			font-weight: 300;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2em;
+			z-index: 10;
+			box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+		}
+		#clock #time div span:nth-child(2){
+			height: 30px;
+			font-size: 0.7em;
+			letter-spacing: 0.15em;	
+			font-weight: 500;
+			z-index: 9;
+			box-shadow: none;
+			background: #127fd6;
+			text-transform: uppercase;
+		}
+		#clock #time div:last-child span{
+			background: #ff006a;
+		}
+		#clock #time div:last-child span:nth-child(2){
+			background: #ec0062;
+		}
+	</style>
+</head>
+<body bgcolor="#09161d">
+		<h1 class="neon" data-text="UNIVERSIDAD BANCARIA DE MÉXICO || PROYECTO">
+			UNIVERSIDAD BANCARIA DE MÉXICO || PROYECTO
+		</h1>
+	<div id="clock">
+		<h2>La Hora Actual</h2>
+		<div id="time">
+			<div><span id="hour">00</span><span>Horas</span></div>
+			<div><span id="minutes">00</span><span>Minutos</span></div>
+			<div><span id="seconds">00</span><span>Segundos</span></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function clock(){
+			var hours = document.getElementById('hour');
+			var minutes = document.getElementById('minutes');
+			var seconds = document.getElementById('seconds');
+			var h = new Date().getHours();
+			var m = new Date().getMinutes();
+			var s = new Date().getSeconds();
+			hours.innerHTML = h;
+			minutes.innerHTML = m;
+			seconds.innerHTML = s;
+		}
+		var interval = setInterval(clock, 1000);
+	</script>
+</body>
+</html>

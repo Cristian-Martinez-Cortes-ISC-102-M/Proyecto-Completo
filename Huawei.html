@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Xiaomi</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #09161d;
+		}
+		.img{
+			pointer-events: none;
+		}
+		.card{
+			position: relative;
+			width: 320px;
+			height: 420px;
+			background: #285169;
+			border-radius: 20px;
+			overflow: hidden;
+			margin-left: 10px;
+		}
+		.card::before{
+			content: '';
+			position: absolute;
+			top: -50%;
+			width: 100%;
+			height: 100%;
+			background: #9e2424;
+			transform: skewY(345deg);
+			transition: 0.5s;
+		}
+		.card:hover::before{
+			top: -70%;
+			transform: skewY(390deg);
+		}
+		.card::after{
+			content: 'Huawei';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-weight: 600;
+			font-size: 3.8em;
+			color: rgba(0, 0, 0, 0.1);
+		}
+		.card .imgBx{
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 20px;
+			z-index: 1;
+		}
+		.card .imgBx img{
+			max-width: 100%;
+			transition: 0.5s;
+
+		}
+		.card:hover .imgBx img{
+			max-width: 75%;
+			margin-left: 25px;
+		}
+		.card .contentBx{
+			position: relative;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			z-index: 1;
+		}
+		.card .contentBx h3{
+			font-size: 18px;
+			color: #fff;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		.card .contentBx .price{
+			font-size: 24px;
+			color: #fff;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		.card .contentBx .buy{
+			position: relative;
+			top: 200;
+			opacity: 0;
+			padding: 10px 30px;
+			margin-top: 15px;
+			color: #fff;
+			text-decoration: none;
+			background: #2196f3;
+			border-radius: 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: 0.5s;
+		}
+		.card:hover .contentBx .buy{
+			top: 0;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<!--Huawei P40 Lite-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/Nskv1YL/Huawei-P40-Lite.png" alt="Huawei-P40-Lite" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3 >Huawei P40 Lite</h3>
+			<h2 class="price">$6,599.<small>00</small></h2>
+			<a href="HP40L.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Huawei Nova 5T-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/Czy6MG1/Huawei-Nova5-T.png" alt="Huawei-Nova5-T" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Huawei Nova 5T</h3>
+			<h2 class="price">$7,799.<small>00</small></h2>
+			<a href="HN5T.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Huawei P40 Lite E-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/QJLLv3N/Huawei-P40-Lite-E.png" alt="Huawei-P40-Lite-E" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Huawei P40 Lite E</h3>
+			<h2 class="price">$4,499.<small>00</small></h2>
+			<a href="HP40LE.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Huawei Y8S-->
+
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/1mS8YTj/Huawei-Y8-S.png" alt="Huawei-Y8-S" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Huawei Y8S</h3>
+			<h2 class="price">$4,499.<small>00</small></h2>
+			<a href="HY8S.html" class="buy">Comprar</a>
+		</div>
+	</div>
+</body>
+</html>

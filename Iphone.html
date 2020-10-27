@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iphone</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #09161d;
+		}
+		.img{
+			pointer-events: none;
+		}
+		.card{
+			position: relative;
+			width: 320px;
+			height: 420px;
+			background: #eaff00;
+			border-radius: 20px;
+			overflow: hidden;
+			margin-left: 10px;
+		}
+		.card::before{
+			content: '';
+			position: absolute;
+			top: -50%;
+			width: 100%;
+			height: 100%;
+			background: #00ff84;
+			transform: skewY(345deg);
+			transition: 0.5s;
+		}
+		.card:hover::before{
+			top: -70%;
+			transform: skewY(390deg);
+		}
+		.card::after{
+			content: 'Iphone';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-weight: 600;
+			font-size: 4em;
+			color: rgba(0, 0, 0, 0.1);
+		}
+		.card .imgBx{
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 20px;
+			z-index: 1;
+		}
+		.card .imgBx img{
+			max-width: 100%;
+			transition: 0.5s;
+
+		}
+		.card:hover .imgBx img{
+			max-width: 75%;
+			margin-left: 25px;
+		}
+		.card .contentBx{
+			position: relative;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			z-index: 1;
+		}
+		.card .contentBx h3{
+			font-size: 18px;
+			color: #000;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		.card .contentBx .price{
+			font-size: 24px;
+			color: #000;
+			font-weight: 500;
+			letter-spacing: 1px;
+		}
+		.card .contentBx .buy{
+			position: relative;
+			top: 200;
+			opacity: 0;
+			padding: 10px 30px;
+			margin-top: 15px;
+			color: #fff;
+			text-decoration: none;
+			background: #2196f3;
+			border-radius: 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: 0.5s;
+		}
+		.card:hover .contentBx .buy{
+			top: 0;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<!--Iphone 12 Pro Max-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/HrDNHfh/Iphone12-Pro-Max.png" alt="Iphone12-Pro-Max" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3 >Iphone 12 Pro Max</h3>
+			<h2 class="price">$32,999.<small>00</small></h2>
+			<a href="I12PM.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Iphone 12 Pro-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/HrDNHfh/Iphone12-Pro-Max.png" alt="Iphone12-Pro-Max" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Iphone 12 Pro</h3>
+			<h2 class="price">$30,499.<small>00</small></h2>
+			<a href="I12P.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Iphone 12-->
+	
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/Rg03bww/Iphone12.png" alt="Iphone12" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Iphone 12</h3>
+			<h2 class="price">$23,999.<small>00</small></h2>
+			<a href="I12.html" class="buy">Comprar</a>
+		</div>
+	</div>
+
+	<!--Iphone 12 Mini-->
+
+	<div class="card">
+		<div class="imgBx">
+			<a class="img" href="https://imgbb.com/">
+				<img src="https://i.ibb.co/KWwFF7Q/Iphone12-Mini.png" alt="Iphone12-Mini" border="0">
+			</a>
+		</div>
+		<div class="contentBx">
+			<h3>Iphone 12 Mini</h3>
+			<h2 class="price">$21,499.<small>00</small></h2>
+			<a href="I12.html" class="buy">Comprar</a>
+		</div>
+	</div>
+</body>
+</html>
